@@ -41,14 +41,14 @@ void loop()
     for (int i = 0; i <= 255; i++)
        {
         digitalPotWrite(i, CS_1);
-        digitalPotWrite(i, CS_2);
+        digitalPotWrite(255-i, CS_2);
         delay(10);
        }
     delay(500);
     for (int i = 255; i >= 0; i--)
       {
         digitalPotWrite(i, CS_1);
-        digitalPotWrite(i, CS_2);
+        digitalPotWrite(255-i, CS_2);
         delay(10);
       }
   }
